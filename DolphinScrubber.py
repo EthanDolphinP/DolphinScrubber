@@ -29,6 +29,7 @@ class DolphinScrubber():
                     self.url = input("Please input a new URL (eg. https://en.wikipedia.org/wiki/Giant_oarfish): ")
         return self.url
 
+    # tutorial code from: https://realpython.com/python-web-scraping-practical-introduction/
     def open_url(self, url):
         try:
             page = urlopen(url)
@@ -39,6 +40,7 @@ class DolphinScrubber():
         print(html)
         return html
 
+    # tutorial code from: https://realpython.com/python-web-scraping-practical-introduction/
     def html_tag_search(self, html):
         input_tag = input("Please input the tag of the text you want to search for (eg. '<title>'): ")
         start_index = html.find(f"{input_tag}") + len(f"{input_tag}")
