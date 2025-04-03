@@ -44,7 +44,7 @@ class DolphinScrubber():
     def html_tag_search(self, html):
         input_tag = input("Please input the tag of the text you want to search for (eg. '<title>'): ")
         start_index = html.find(f"{input_tag}") + len(f"{input_tag}")
-        end_index = html.find("</title>")
+        end_index = html.find(f"{input_tag}")
         text = html[start_index:end_index]
         if text:
             print(f"Found text: {text}")
